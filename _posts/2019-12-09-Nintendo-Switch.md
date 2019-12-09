@@ -7,7 +7,7 @@ article_header:
     src: /image/switch.jpg
 ---
 
-- [健身环大冒险](site.url}}/image/ringfit.jpg)
+- [健身环大冒险]({{site.url}}/image/ringfit.jpg)
 
 - 塞尔达传奇：旷野之息
 
