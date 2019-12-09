@@ -1,9 +1,11 @@
 ---
 title: Nintendo Switch
-tags: TeXt
+tags: Game
+user-name: dkkyjy
+repo-name: dkkyjy.github.io
 ---
 
-- 健身环大冒险
+- 健身环大冒险[](../image/ringfit.jpg)
 
 - 塞尔达传奇：旷野之息
 
