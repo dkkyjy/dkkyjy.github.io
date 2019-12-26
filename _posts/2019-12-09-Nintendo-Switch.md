@@ -24,3 +24,5 @@ article_header:
 - [喷射战士]({{site.url}}/image/Splatoon.jpg)
 
 - [火焰纹章]({{site.url}}/image/FireEmblem.png)
+
+- ![switch](/image/switch.jpg)
