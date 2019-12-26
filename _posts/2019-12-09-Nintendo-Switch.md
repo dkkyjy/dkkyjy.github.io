@@ -22,3 +22,5 @@ article_header:
 - ![全明星大乱斗]({{site.url}}/image/SuperSmashBros.jpg)
 
 - ![喷射战士]({{site.url}}/image/Splatoon.jpg)
+
+- ![火焰纹章]({{site.url}}/image/FireEmblem.png)
