@@ -13,8 +13,8 @@ article_header:
 - [塞尔达传奇：旷野之息]({{site.url}}/image/TheLegendofZelda.jpg)
 ![](/image/TheLegendofZelda.jpg)
 
-- [超级马里奥：奥德赛]({{site.url}}/image/SuperMarioOdyssey.jpg)
-![](/image/SuperMarioOdyssey.jpg)
+- [超级马里奥：奥德赛]({{site.url}}/image/SuperMarioOdyssey.png)
+![](/image/SuperMarioOdyssey.png)
 
 - [马里奥赛车]({{site.url}}/image/MarioKart8.jpg)
 ![](/image/MarioKart8.jpg)
@@ -22,8 +22,8 @@ article_header:
 - [马里奥制造]({{site.url}}/image/SuperMarioMaker.jpg)
 ![](/image/SuperMarioMaker.jpg)
 
-- [路易吉洋馆]({{site.url}}/image/LuigiMansion.jpg)
-![](/image/LuigiMansion.jpg)
+- [路易吉洋馆]({{site.url}}/image/LuigiMansion.png)
+![](/image/LuigiMansion.png)
 
 - [全明星大乱斗]({{site.url}}/image/SuperSmashBros.jpg)
 ![](/image/SuperSmashBros.jpg)
