@@ -16,17 +16,20 @@ article_header:
 - [超级马里奥：奥德赛]({{site.url}}/image/SuperMarioOdyssey.png)
 ![](/image/SuperMarioOdyssey.png)
 
-- [马里奥赛车]({{site.url}}/image/MarioKart8.jpg)
-![](/image/MarioKart8.jpg)
+- [全明星大乱斗]({{site.url}}/image/SuperSmashBros.jpg)
+![](/image/SuperSmashBros.jpg)
+
+- [马里奥赛车]({{site.url}}/image/MarioKart.jpg)
+![](/image/MarioKart.jpg)
+
+- [马里奥派对]({{site.url}}/image/SuperMarioParty.jpg)
+![](/image/SuperMarioParty.jpg)
 
 - [马里奥制造]({{site.url}}/image/SuperMarioMaker.jpg)
 ![](/image/SuperMarioMaker.jpg)
 
 - [路易吉洋馆]({{site.url}}/image/LuigiMansion.png)
 ![](/image/LuigiMansion.png)
-
-- [全明星大乱斗]({{site.url}}/image/SuperSmashBros.jpg)
-![](/image/SuperSmashBros.jpg)
 
 - [喷射战士]({{site.url}}/image/Splatoon.jpg)
 ![](/image/Splatoon.jpg)
