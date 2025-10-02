@@ -1,5 +1,7 @@
-使用 uv run 和 Claude Projects 通过一次性提示构建 Python 工具
+# 使用 uv run 和 Claude Projects 通过一次性提示构建 Python 工具
+
 2024年12月19日
+
 我写了很多关于我如何使用 Claude 通过 Claude Artifacts 构建一次性 HTML+JavaScript 应用程序的文章。我最近开始使用类似的模式来创建一次性 Python 实用程序，使用自定义的 Claude Project 并结合 uv 的依赖管理功能。
 （在 LLM 术语中，“一次性”提示是指能在第一次尝试时就产生完整预期结果的提示。令人困惑的是，它有时也指包含单个期望输出格式示例的提示。这里我使用的是这两个定义中的第一个。）
 我将从一个用这种方式构建的工具示例开始。
@@ -13,15 +15,15 @@ uv run debug_s3_access.py \
 你可以在这里看到文本输出。
 内联依赖和 uv run
 关键的是，我不需要采取任何额外步骤来安装脚本所需的任何依赖项。这是因为脚本以这个神奇的注释开头：
-# /// script
-# requires-python = ">=3.12"
-# dependencies = [
-#     "click",
-#     "boto3",
-#     "urllib3",
-#     "rich",
-# ]
-# ///
+```script
+requires-python = ">=3.12"
+dependencies = [
+    "click",
+    "boto3",
+    "urllib3",
+    "rich",
+]
+```
 这是内联脚本依赖项的一个例子，这是 PEP 723 中描述并由 uv run 实现的一个功能。运行脚本会导致 uv 创建一个安装了这些依赖项的临时虚拟环境，一旦 uv 缓存被填充，这个过程只需要几毫秒。
 即使脚本是通过 URL 指定的，这也能工作！任何安装了 uv 的人都可以运行以下命令（前提是你相信我还没有用恶意脚本替换它）来调试他们自己的 S3 存储桶：
 uv run http://tools.simonwillison.net/python/debug_s3_access.py \
@@ -29,17 +31,17 @@ uv run http://tools.simonwillison.net/python/debug_s3_access.py \
 在 Claude Project 的帮助下编写这些脚本
 我现在能够一次性生成这样的脚本，是因为我设置了一个名为“Python app”的 Claude Project。项目可以有自定义指令，我利用这些指令来“教导”Claude 如何利用内联脚本依赖项：
 您将 Python 工具编写为单个文件。它们总是以这个注释开头：
-# /// script
-# requires-python = ">=3.12"
-# ///
+```script
+requires-python = ">=3.12"
+```
 这些文件可以包含对库（如 Click）的依赖。如果包含，这些依赖项会列在同一个注释中的一个列表中（这里显示了两个依赖项）：
-# /// script
-# requires-python = ">=3.12"
-# dependencies = [
-#     "click",
-#     "sqlite-utils",
-# ]
-# ///
+```script
+requires-python = ">=3.12"
+dependencies = [
+    "click",
+    "sqlite-utils",
+]
+```
 这就是 Claude 可靠地生成功能齐全的 Python 工具（作为单个脚本）所需的一切，这些脚本可以直接运行，使用 Claude 选择包含的任何依赖项。
 我之前并没有建议 Claude 在 debug_s3_access.py 脚本中使用 rich，但它还是决定使用了它！
 我最近才开始试验这种模式，但它似乎效果很好。这是另一个例子——我的提示是：
