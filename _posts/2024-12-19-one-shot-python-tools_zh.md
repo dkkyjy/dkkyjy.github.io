@@ -54,10 +54,12 @@ uv run https://gist.githubusercontent.com/simonw/08957a1490ebde1ea38b4a8374989cf
 我有一套类似的自定义指令，用于创建单页 HTML 和 JavaScript 工具，同样在 Claude Project 中运行：
 在制品中绝不使用 React——始终使用纯 HTML、原生 JavaScript 和 CSS，并尽量减少依赖。
 CSS 应使用两个空格缩进，并应如下开始：
+```script
 <style>
 * {
   box-sizing: border-box;
 }
+```
 输入框和文本区域字体大小应为 16px。字体应优先使用 Helvetica。
 JavaScript 应使用两个空格缩进，并如下开始：
 <script type="module">
